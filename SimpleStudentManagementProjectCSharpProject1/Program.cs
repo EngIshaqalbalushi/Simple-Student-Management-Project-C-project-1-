@@ -219,7 +219,8 @@ namespace SimpleStudentManagementProjectCSharpProject1
 
         static void sortStudentsByMark()
         {
-           
+
+            Console.WriteLine("######  sort student by Mark #####\n\n");
             int[] indices = new int[studentMark.Length];
             for (int i = 0; i < indices.Length; i++)
             {
@@ -261,6 +262,9 @@ namespace SimpleStudentManagementProjectCSharpProject1
 
         static void deleteStudentRecordAndShifiing ()
         {
+
+            Console.WriteLine("######  delete student by Name #####\n\n");
+
             Console.Write("Enter student name to delete: ");
             string nameToDelete = Console.ReadLine();
 
@@ -287,7 +291,7 @@ namespace SimpleStudentManagementProjectCSharpProject1
 
             for (int i = 0, j = 0; i < studentName.Length; i++)
             {
-                if (i == deleteIndex) continue;
+                if (i == deleteIndex)     ;
 
                 newNames[j] = studentName[i];
                 newAges[j] = studentAge[i];
