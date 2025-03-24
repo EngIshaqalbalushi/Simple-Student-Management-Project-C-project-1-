@@ -3,8 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\Codeline\\Desktop\\Projects\\SimpleStudentManagementProjectCSharpProject1\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F931FF5C-5CD5-4357-8D15-63CBB34FD315}|SimpleStudentManagementProjectCSharpProject1\\SimpleStudentManagementProjectCSharpProject1.csproj|c:\\users\\codeline\\desktop\\projects\\simplestudentmanagementprojectcsharpproject1\\simplestudentmanagementprojectcsharpproject1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F931FF5C-5CD5-4357-8D15-63CBB34FD315}|SimpleStudentManagementProjectCSharpProject1\\SimpleStudentManagementProjectCSharpProject1.csproj|solutionrelative:simplestudentmanagementprojectcsharpproject1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Codeline\\Desktop\\Projects\\SimpleStudentManagementProjectCSharpProject1\\SimpleStudentManagementProjectCSharpProject1\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:SimpleStudentManagementProjectCSharpProject1\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -24,7 +24,7 @@
               "RelativeDocumentMoniker": "SimpleStudentManagementProjectCSharpProject1\\Program.cs",
               "ToolTip": "C:\\Users\\Codeline\\Desktop\\Projects\\SimpleStudentManagementProjectCSharpProject1\\SimpleStudentManagementProjectCSharpProject1\\Program.cs",
               "RelativeToolTip": "SimpleStudentManagementProjectCSharpProject1\\Program.cs",
-              "ViewState": "AgIAAOoAAAAAAAAAAAAYwAABAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABoBAAAAAAAAAAAAABsBAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-20T06:06:19.467Z",
               "EditorCaption": ""

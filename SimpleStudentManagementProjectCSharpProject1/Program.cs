@@ -5,12 +5,14 @@ namespace SimpleStudentManagementProjectCSharpProject1
 {
     internal class Program
     {
-
-         static string[] studentName =new string[2];
+        // declare student array to store data
+        static string[] studentName =new string[2];
          static int[] studentAge = new int[2];
          static  double[] studentMark = new double[2];
          static DateTime[] dateTime = new DateTime[2];
-         static int count = 0;
+
+        //declare variables to store student number
+        static int count = 0;
 
 
 
@@ -23,6 +25,8 @@ namespace SimpleStudentManagementProjectCSharpProject1
             while (true)
             {
                 Console.Clear();
+
+                // display the options
                 Console.WriteLine("\nChoose an One:");
                 Console.WriteLine("1. Add a new student record");
                 Console.WriteLine("2. View all students with formatted output and subject-wise marks");
@@ -35,6 +39,8 @@ namespace SimpleStudentManagementProjectCSharpProject1
                 Console.Write("Enter your choice: ");
 
                 int choice = int.Parse(Console.ReadLine());
+
+                // handle the user's choice 
 
                 switch (choice)
                 {
@@ -67,7 +73,9 @@ namespace SimpleStudentManagementProjectCSharpProject1
         {
             Console.WriteLine("######  Enter student Data #####\n\n");
 
-            for(int i = 0; i < studentName.Length; i++)
+
+            // add new student in student record 
+            for (int i = 0; i < studentName.Length; i++)
             {
                 Console.WriteLine("Enter student Name");
                 string name = Console.ReadLine();
@@ -78,7 +86,7 @@ namespace SimpleStudentManagementProjectCSharpProject1
                 Console.WriteLine("Enter student Age");
                 int age = int.Parse(Console.ReadLine());
 
-
+                // chacik if student age is greater than 21
                 if (age < 21)
                 {
                     Console.WriteLine(" validated");
@@ -98,9 +106,7 @@ namespace SimpleStudentManagementProjectCSharpProject1
                     studentAge[i] = age;
 
 
-
-
-
+              
                 Console.WriteLine("Enter student Mark");
                 double mark = double.Parse(Console.ReadLine());
 
@@ -129,7 +135,7 @@ namespace SimpleStudentManagementProjectCSharpProject1
         }
         static void viewAllStudents()
         {
-
+            // view all student data
             Console.WriteLine("######  View student Data #####\n\n");
 
             for (int i = 0; i < studentName.Length; i++)
@@ -146,7 +152,7 @@ namespace SimpleStudentManagementProjectCSharpProject1
         {
             Console.WriteLine("######  Find student Data  By Name #####\n\n");
 
-
+            // find student by name
             int index = 0;
             for (int i = 0; i < studentName.Length; i++)
             {
@@ -154,8 +160,8 @@ namespace SimpleStudentManagementProjectCSharpProject1
                 string name = Console.ReadLine();
 
                 index = Array.IndexOf(studentName, name);
-               
-                
+
+                // check if student name is found
                 if (index!=-1)
                 {
 
@@ -182,8 +188,8 @@ namespace SimpleStudentManagementProjectCSharpProject1
         {
             Console.WriteLine("######  Calculate the class average #####\n\n");
             double number = 0,avr=0;
-            
-            for(int i=0;i<studentMark.Length;i++)
+            // calculate the class average
+            for (int i=0;i<studentMark.Length;i++)
             {
                 number += studentMark[i];
             }
@@ -197,17 +203,16 @@ namespace SimpleStudentManagementProjectCSharpProject1
         }
         static void findTopProrfomingStudent()
         {
-            int index=0 ;
+            // find the top-performing student
+            int index =0 ;
             double top = 0;
-            for(int i=0;i<studentMark.Length;i++)
+            for(int i=0;i< count; i++)
             {
                 if (studentMark[i] > top)
                 {
-                    top = studentMark[i]
-                    ;
-                }else
-                {
-                    top = top;
+                    top = studentMark[i];
+                    index = i;
+
                 }
             }
 
@@ -219,7 +224,7 @@ namespace SimpleStudentManagementProjectCSharpProject1
 
         static void sortStudentsByMark()
         {
-
+            // sort students by marks
             Console.WriteLine("######  sort student by Mark #####\n\n");
             int[] indices = new int[studentMark.Length];
             for (int i = 0; i < indices.Length; i++)
@@ -230,10 +235,11 @@ namespace SimpleStudentManagementProjectCSharpProject1
           
             for (int i = 0; i < studentMark.Length - 1; i++)
             {
-               
+           
                 int maxIndex = i;
                 for (int j = i + 1; j < studentMark.Length; j++)
                 {
+                    // find the index of the student with the highest mark
                     if (studentMark[indices[j]] > studentMark[indices[maxIndex]])
                     {
                         maxIndex = j;
@@ -262,12 +268,12 @@ namespace SimpleStudentManagementProjectCSharpProject1
 
         static void deleteStudentRecordAndShifiing ()
         {
-
+            // delete a student record
             Console.WriteLine("######  delete student by Name #####\n\n");
 
             Console.Write("Enter student name to delete: ");
             string nameToDelete = Console.ReadLine();
-
+            // find the index of the student to delete
             int deleteIndex = -1;
             for (int i = 0; i < studentName.Length; i++)
             {
@@ -277,7 +283,7 @@ namespace SimpleStudentManagementProjectCSharpProject1
                     break;
                 }
             }
-
+            // if the student is not found
             if (deleteIndex == -1)
             {
                 Console.WriteLine("not found");
@@ -288,7 +294,7 @@ namespace SimpleStudentManagementProjectCSharpProject1
             string[] newNames = new string[studentName.Length - 1];
             int[] newAges = new int[studentAge.Length - 1];
             double[] newMarks = new double[studentMark.Length - 1];
-
+            // shift the elements to the left
             for (int i = 0, j = 0; i < studentName.Length; i++)
             {
                 if (i == deleteIndex)     ;
